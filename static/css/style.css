@@ -3,6 +3,9 @@
 *:after {
   box-sizing: inherit;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   display: block;
@@ -67,7 +70,7 @@ ul.side-nav li:not(:first-child):hover {
   }
 }
 ul.side-nav a i {
-  margin-right: 1rem;
+  margin-right: 1vw;
 }
 ul.side-nav h1 {
   margin: 0;
@@ -86,7 +89,7 @@ ul.side-nav span {
   color: black;
 }
 .headshot {
-  background: url(/static/Images/dude.jfif) no-repeat top center/cover;
+  background: url(/static/Images/Being-a-Programmer.jpg) no-repeat top center/cover;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -120,6 +123,7 @@ ul.side-nav span {
   font-size: 1.5rem;
   font-weight: 200;
 }
+/* Card Styling */
 .card {
   position: relative;
   overflow: hidden;
@@ -165,10 +169,36 @@ ul.side-nav span {
   position: relative;
   text-align: center;
 }
+/* Project */
+.projects-cards{
+  display: flex;
+  justify-content: space-between;
+}
+.project-card {
+  position: relative;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  width: 40vw;
+  margin: 0vh 2vw 10vh 2vw;
+  box-shadow: 0px 1rem 1rem rgba(4, 6, 7, 0.273);
+}
+.project-card h3{
+  color: #1f9784;
+  font-size: 1.5rem;
+}
+.project-card p{
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+}
+.project-card img {
+  width: 100%;
+}
+/* Area Styling for simple cards */
 .area {
   position: relative;
   overflow: hidden;
-  margin: 0.5rem 0 1rem 0;
   padding: 1rem;
   background-color: #fff;
   border-radius: 0.5rem;
@@ -208,9 +238,4 @@ ul.side-nav span {
   flex-flow: column wrap;
   margin-left: 8vw;
   margin-bottom: 10vh;
-}
-
-footer {
-  background-color: #008073;
-  height: 10vh;
 }
