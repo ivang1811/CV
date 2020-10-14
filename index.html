@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="static/css/style.css" />
+    <script src="static/index.js"></script>
   </head>
   <body>
     <main>
@@ -22,26 +23,26 @@
             </h1>
             <span>Fullstack Developer</span>
           </li>
-          <li>
+          <li data-selection="about">
             <a href="#about"><i class="fas fa-user"></i>About</a>
           </li>
-          <li>
+          <li data-selection="experience">
             <a href="#experience"
               ><i class="fas fa-chart-line"></i>Experience</a
             >
           </li>
-          <li>
+          <li data-selection="skills">
             <a href="#skills"><i class="fas fa-wrench"></i>Skills</a>
           </li>
-          <li>
+          <li data-selection="projects">
             <a href="#projects"><i class="fas fa-columns"></i>Projects</a>
           </li>
-          <li>
+          <li data-selection="education">
           <a href="#education"
               ><i class="fas fa-graduation-cap"></i>Education</a
             >
           </li>
-          <li>
+          <li data-selection="contact">
             <a href="#contact"><i class="fas fa-mobile-alt"></i>Contact</a>
           </li>
         </ul>
@@ -49,7 +50,7 @@
 
       <section class="main">
         <section class="headshot"></section>
-        <section id="about">
+        <section id="about" class="mouseover">
           <h2 class="page-title">About</h2>
           <section class="content">
             <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
@@ -78,7 +79,7 @@
             </p>
           </section>
         </section>
-        <section id="experience"> 
+        <section id="experience" class="mouseover"> 
           <h3 class="page-title">Experience</h3>
           <section class="content">
             <div class="card">
@@ -191,7 +192,41 @@
             </div>
           </section>
         </section>
-        <section id="projects">
+
+        <section id="skills" class="mouseover">
+          <h3 class="page-title">Skills</h3>
+          <section class="area">
+            <div class="header">Front-End</div>
+            <div class="item">
+              <img src="/static/Images/html5.png">
+              <p>HTML</p>
+            </div>
+            <div class="item">
+              <img src="/static/Images/css3.png">
+              <p>CSS3</p>
+            </div>
+            <div class="item">
+              <img src="/static/Images/bootstrap.png">
+              <p>BOOTSTRAP</p>
+            </div>
+          </section>
+          <section class="area">
+            <div class="header">Back-End</div>
+            <div class="item">
+              <img src="/static/Images/ruby.png">
+              <p>RUBY</p>
+            </div>
+            <div class="item">
+              <img src="/static/Images/mongodb.png">
+              <p>MONGODB</p>
+            </div>
+            <div class="item">
+              <img src="/static/Images/nodejs.png">
+              <p>NODEJS</p>
+            </div>
+          </section>
+        </section>
+        <section id="projects" class="mouseover">
           <h3 class="page-title">Projects</h3>
           <div class="projects-cards">
             <div class="project-card">
@@ -247,40 +282,7 @@
           </div>
         </section>
 
-        <section id="skills">
-        <h3 class="page-title">Skills</h3>
-        <section class="area">
-          <div class="header">Front-End</div>
-          <div class="item">
-            <img src="/static/Images/html5.png">
-            <p>HTML</p>
-          </div>
-          <div class="item">
-            <img src="/static/Images/css3.png">
-            <p>CSS3</p>
-          </div>
-          <div class="item">
-            <img src="/static/Images/bootstrap.png">
-            <p>BOOTSTRAP</p>
-          </div>
-        </section>
-        <section class="area">
-          <div class="header">Back-End</div>
-          <div class="item">
-            <img src="/static/Images/ruby.png">
-            <p>RUBY</p>
-          </div>
-          <div class="item">
-            <img src="/static/Images/mongodb.png">
-            <p>MONGODB</p>
-          </div>
-          <div class="item">
-            <img src="/static/Images/nodejs.png">
-            <p>NODEJS</p>
-          </div>
-        </section>
-
-        <section id="education">
+        <section id="education" class="mouseover">
           <h3 class="page-title">Education</h3>
           <div class="area">
             <h3>London South Bank University</h3>
@@ -291,16 +293,16 @@
             <p class="info">MSc Computer Science - 1st</p>
           </div>
 
-          <div class="area">
-            <h3>Secondary School - A levels</h3>
-            <p class="info">Computer Science - A*</p>
-            <p class="info">Biology - A*</p>
-            <p class="info">History - A</p>
-          </div>
-
+        
+        <div class="area">
+          <h3>Secondary School - A levels</h3>
+          <p class="info">Computer Science - A*</p>
+          <p class="info">Biology - A*</p>
+          <p class="info">History - A</p>
+        </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="mouseover">
           <h3 class="page-title">Contact</h3>
           <div class="contact-section">
             <a href="mailto:Bob.Smith@gmail.com"><i class="fas fa-envelope"></i>Bob.Smith@gmail.com</a>
@@ -308,10 +310,6 @@
             <a href="Linkedin.com/bobsmith"><i class="fab fa-linkedin-in"></i>Linkedin.com/bobsmith</a>
           </div>
         </section>
-
-
-        </section>
-      </section>
     </main>
   </body>
 </html>

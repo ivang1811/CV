@@ -60,6 +60,12 @@ ul.side-nav li:not(:first-child):hover {
   background-color: rgb(226, 226, 226);
   border-left: #1f9784 0.5rem solid;
 }
+.active {
+  animation-name: li-hover;
+  animation-duration: 0.3s;
+  background-color: rgb(226, 226, 226);
+  border-left: #1f9784 0.5rem solid; 
+}
 @keyframes li-hover {
   from {
     border-left: #1f9784 0rem solid;
@@ -132,6 +138,10 @@ ul.side-nav span {
   border-radius: 0.5rem;
   margin: 8vh 7vw 8vh 7vw;
   box-shadow: 0px 1rem 1rem rgba(4, 6, 7, 0.273);
+  transition: transform .4s; /* Animation */
+}
+.card:hover {
+  transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 .card .header {
   border-bottom: #444 1px solid;
@@ -182,6 +192,10 @@ ul.side-nav span {
   width: 40vw;
   margin: 0vh 2vw 10vh 2vw;
   box-shadow: 0px 1rem 1rem rgba(4, 6, 7, 0.273);
+  transition: transform .4s; /* Animation */
+}
+.project-card:hover {
+  transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 .project-card h3{
   color: #1f9784;
@@ -204,6 +218,10 @@ ul.side-nav span {
   border-radius: 0.5rem;
   margin: 8vh 7vw 8vh 7vw;
   box-shadow: 0px 1rem 1rem rgba(4, 6, 7, 0.273);
+  transition: transform .4s; /* Animation */
+}
+.area:hover {
+  transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 .area .header {
   font-size: 2rem;
