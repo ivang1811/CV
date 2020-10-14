@@ -94,6 +94,11 @@ ul.side-nav span {
   line-height: 0;
   color: black;
 }
+@media screen and (max-width: 950px) {
+/* Navbar should disapear */
+}
+
+
 .headshot {
   background: url(/static/Images/Being-a-Programmer.jpg) no-repeat top center/cover;
   position: relative;
@@ -157,7 +162,7 @@ ul.side-nav span {
   background-color: rgb(231, 230, 230);
 }
 .content h5 {
-  font-size: 1.5rem;
+  font-size: calc(12px + 1vw)
 }
 .content h4 {
   color: rgb(206, 203, 203);
@@ -256,4 +261,136 @@ ul.side-nav span {
   flex-flow: column wrap;
   margin-left: 8vw;
   margin-bottom: 10vh;
+}
+
+/* Phone Nav */
+.topnav {
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed;
+  top:0;
+  display: none;
+  box-shadow: 0px 1rem 1rem rgba(4, 6, 7, 0.273);
+  width:100%;
+  z-index:100;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  padding: 14px 2vw;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+
+.topnav a i {
+  margin-right: 0.3vw;
+}
+
+.topnav a.icon {
+  float: right;
+}
+
+.topnav #myLinks a:hover {
+  background-color: #1f9784;
+  color: white;
+}
+
+.phone-logo {
+  background-color: #cdd1d1;
+  color: #fff!important;
+}
+
+@media screen and (max-width: 1300px) {
+  ul.side-nav span {
+    font-size: 0.7rem
+  }
+  ul.side-nav a {
+    font-size: 1em;
+  }
+  .content p {
+    font-size: 1.1rem;
+  }
+  .project-card p {
+    font-size: 0.8rem;
+  }
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+  .area .item img {
+    width: 7rem;
+  }
+  #contact a {
+    font-size: 1.5rem;
+}
+}
+@media screen and (max-width: 960px){
+  .topnav {
+    display: block;
+  }
+  ul.side-nav {
+    display: none;
+  }
+  .main {
+    width: 100%;
+  }
+  .area .item img {
+    width: 5rem;
+  }
+  .projects-cards {
+    align-content: center;
+    display: block;
+    text-align: center;
+  }
+  .project-card {
+    width: 85vw;
+    margin-left: 3vw;
+  }
+  .card .header img {
+    width: 8rem;
+  }
+  .header a {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  .topnav a {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 770px){
+  .topnav a {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 700px){
+  .area .item img {
+    width: 3rem;
+}
+
+.topnav a {
+  font-size: 0.5rem;
+  padding: 14px 1vw;
+}
+}
+@media screen and (max-width: 600px){
+  .area .item img {
+    width: 3rem;
+}
+
+.topnav a {
+  font-size: 0.4rem;
+  padding: 14px 1vw;
+}
+}
+@media screen and (max-width: 470px){
+  .project-card {
+    width: 80vw;
+    margin-left: 4vw;
+  }
 }

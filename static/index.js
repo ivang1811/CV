@@ -14,13 +14,24 @@ const activateNavBarClick = (e, sideNavUl) => {
     sideNavUl.forEach((item) => {
         item.classList.remove("active")
     })
-    e.target.parentNode.classList.add("active")
+    console.log(e.target.tagName)
+    if (e.target.tagName == "A"){
+        e.target.parentNode.classList.add("active")
+    }
+    else {
+        e.target.classList.add("active")
+    }
 }
 
 
-
-
-
+function phoneNavigation() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
 
 
 document.addEventListener("DOMContentLoaded", (e) => {
@@ -35,9 +46,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const sideNavUl = document.querySelectorAll("ul.side-nav li:not(:first-child)")
     sideNavUl.forEach((item) => {
         item.addEventListener("click", (e) => {
+            console.log(item)
             activateNavBarClick(e , sideNavUl)
         })
     })
-
+    const phoneClick = document.querySelector("#phone-navigation-click")
+    phoneClick.addEventListener("click", (e) => {
+        phoneNavigation()
+    })
 })
 
