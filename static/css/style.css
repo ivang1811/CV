@@ -6,6 +6,12 @@
 html {
   scroll-behavior: smooth;
 }
+:root {
+  --page-title-colour: #008073;
+  --navbar-active-colour: #1f9784;
+  --page-title-text-colour: #fff;
+  --contact-text-colour: #008073;
+}
 body {
   margin: 0;
   display: block;
@@ -58,21 +64,21 @@ ul.side-nav li:not(:first-child):hover {
   animation-name: li-hover;
   animation-duration: 0.3s;
   background-color: rgb(226, 226, 226);
-  border-left: #1f9784 0.5rem solid;
+  border-left: var(--navbar-active-colour) 0.5rem solid;
 }
 .active {
   animation-name: li-hover;
   animation-duration: 0.3s;
   background-color: rgb(226, 226, 226);
-  border-left: #1f9784 0.5rem solid; 
+  border-left: var(--navbar-active-colour) 0.5rem solid;
 }
 @keyframes li-hover {
   from {
-    border-left: #1f9784 0rem solid;
+    border-left: var(--navbar-active-colour) 0rem solid;
   }
   to {
     background-color: rgb(226, 226, 226);
-    border-left: #1f9784 0.5rem solid;
+    border-left: var(--navbar-active-colour) 0.5rem solid;
   }
 }
 ul.side-nav a i {
@@ -94,13 +100,10 @@ ul.side-nav span {
   line-height: 0;
   color: black;
 }
-@media screen and (max-width: 950px) {
-/* Navbar should disapear */
-}
-
 
 .headshot {
-  background: url(/static/Images/Being-a-Programmer.jpg) no-repeat top center/cover;
+  background: url(/static/Images/Being-a-Programmer.jpg) no-repeat top
+    center/cover;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -111,9 +114,9 @@ ul.side-nav span {
   background: url(/static/Images/bg.png) repeat;
 }
 .page-title {
-  background-color: #008073 !important;
+  background-color: var(--page-title-colour);
   margin: 0;
-  color: #fff;
+  color: var(--page-title-text-colour);
   padding: 1.5rem;
   font-size: 3rem;
   margin-bottom: 10vh;
@@ -143,10 +146,12 @@ ul.side-nav span {
   border-radius: 0.5rem;
   margin: 8vh 7vw 8vh 7vw;
   box-shadow: 0px 1rem 1rem rgba(4, 6, 7, 0.273);
-  transition: transform .4s; /* Animation */
+  transition: transform 0.4s; /* Animation */
 }
 .card:hover {
-  transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(
+    1.03
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 .card .header {
   border-bottom: #444 1px solid;
@@ -162,7 +167,7 @@ ul.side-nav span {
   background-color: rgb(231, 230, 230);
 }
 .content h5 {
-  font-size: calc(12px + 1vw)
+  font-size: calc(12px + 1vw);
 }
 .content h4 {
   color: rgb(206, 203, 203);
@@ -185,7 +190,7 @@ ul.side-nav span {
   text-align: center;
 }
 /* Project */
-.projects-cards{
+.projects-cards {
   display: flex;
   justify-content: space-between;
 }
@@ -197,16 +202,18 @@ ul.side-nav span {
   width: 40vw;
   margin: 0vh 2vw 10vh 2vw;
   box-shadow: 0px 1rem 1rem rgba(4, 6, 7, 0.273);
-  transition: transform .4s; /* Animation */
+  transition: transform 0.4s; /* Animation */
 }
 .project-card:hover {
-  transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(
+    1.03
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
-.project-card h3{
+.project-card h3 {
   color: #1f9784;
   font-size: 1.5rem;
 }
-.project-card p{
+.project-card p {
   font-size: 1rem;
   font-weight: 500;
   padding: 1rem;
@@ -223,10 +230,10 @@ ul.side-nav span {
   border-radius: 0.5rem;
   margin: 8vh 7vw 8vh 7vw;
   box-shadow: 0px 1rem 1rem rgba(4, 6, 7, 0.273);
-  transition: transform .4s; /* Animation */
+  transition: transform 0.4s; /* Animation */
 }
 .area:hover {
-  transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.03);
 }
 .area .header {
   font-size: 2rem;
@@ -251,7 +258,7 @@ ul.side-nav span {
   text-decoration: none;
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #008073;
+  color: var(--contact-text-colour);
 }
 #contact a i {
   margin-right: 1rem;
@@ -268,11 +275,11 @@ ul.side-nav span {
   overflow: hidden;
   background-color: #ffffff;
   position: fixed;
-  top:0;
+  top: 0;
   display: none;
   box-shadow: 0px 1rem 1rem rgba(4, 6, 7, 0.273);
-  width:100%;
-  z-index:100;
+  width: 100%;
+  z-index: 100;
 }
 
 .topnav #myLinks {
@@ -286,7 +293,6 @@ ul.side-nav span {
   text-decoration: none;
   font-size: 1rem;
 }
-
 
 .topnav a i {
   margin-right: 0.3vw;
@@ -303,12 +309,12 @@ ul.side-nav span {
 
 .phone-logo {
   background-color: #cdd1d1;
-  color: #fff!important;
+  color: #fff !important;
 }
 
 @media screen and (max-width: 1300px) {
   ul.side-nav span {
-    font-size: 0.7rem
+    font-size: 0.7rem;
   }
   ul.side-nav a {
     font-size: 1em;
@@ -327,9 +333,10 @@ ul.side-nav span {
   }
   #contact a {
     font-size: 1.5rem;
+  }
 }
-}
-@media screen and (max-width: 960px){
+
+@media screen and (max-width: 960px) {
   .topnav {
     display: block;
   }
@@ -358,37 +365,42 @@ ul.side-nav span {
     font-size: 1.5rem;
   }
 }
+
 @media screen and (max-width: 860px) {
   .topnav a {
     font-size: 0.9rem;
   }
 }
-@media screen and (max-width: 770px){
+
+@media screen and (max-width: 770px) {
   .topnav a {
     font-size: 0.7rem;
   }
 }
-@media screen and (max-width: 700px){
+
+@media screen and (max-width: 700px) {
   .area .item img {
     width: 3rem;
+  }
+
+  .topnav a {
+    font-size: 0.5rem;
+    padding: 14px 1vw;
+  }
 }
 
-.topnav a {
-  font-size: 0.5rem;
-  padding: 14px 1vw;
-}
-}
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .area .item img {
     width: 3rem;
+  }
+
+  .topnav a {
+    font-size: 0.4rem;
+    padding: 14px 1vw;
+  }
 }
 
-.topnav a {
-  font-size: 0.4rem;
-  padding: 14px 1vw;
-}
-}
-@media screen and (max-width: 470px){
+@media screen and (max-width: 470px) {
   .project-card {
     width: 80vw;
     margin-left: 4vw;
